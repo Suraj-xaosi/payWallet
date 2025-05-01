@@ -4,7 +4,7 @@ import { Card } from "./Card";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/app/store/store";
-import StoreProvider from "./StoreProvider";
+
 
 
 
@@ -47,9 +47,8 @@ export default function Balance() {
             <Card title="Balance">
                 {balance !== null ? `$${balance.toFixed(2)}` : "Loading..."}
             </Card>
-            <div>{count}</div>
-            <button onClick={() => dispatch({ type: 'count/increment' })}>Increment</button>
-            <button onClick={() => dispatch({ type: 'count/decrement' })}>Decrement</button>
+            
+            
         </div>
     );
 }

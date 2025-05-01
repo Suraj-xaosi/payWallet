@@ -58,18 +58,21 @@ export default function Signuppage(){
         }
     }
     return(
-        <Card title="Sign up ">
-            <div>
-            <TextInput placeholder={"suraj kumar"} label="username" onChange={(value) => {setUsername(value)}} />
-            </div>
-            <div>
-            <TextInput placeholder={"1234567890"} label="Number" onChange={(value) => {setNumber(value)}} />
-            </div>
-            <div>
-            <TextInput placeholder={"strong password"} label="password" onChange={(value) => {setPassword(value)}} />
-            </div>
-            <button onClick={onclick}>SIGN UP</button>
-            
-        </Card>
+        <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
+            <Card title="Sign up ">
+        <div>
+        <TextInput placeholder={"suraj kumar"} label="username" onChange={(value) => {setUsername(value)}} />
+        </div>
+        <div>
+        <TextInput placeholder={"1234567890"} label="Number" onChange={(value) => {setNumber(value)}} />
+        </div>
+        <div>
+        <TextInput placeholder={"strong password"} label="password" onChange={(value) => {setPassword(value)}} />
+        </div>
+        <button onClick={onclick}>SIGN UP</button>
+        
+       </Card> 
+        </div>   
+        
     )
 } 

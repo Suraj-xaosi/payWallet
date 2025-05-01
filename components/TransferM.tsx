@@ -7,6 +7,8 @@ import { useState } from "react";
 import { Button } from "./Button";
 import { useDispatch } from "react-redux";
 
+import { addTransaction } from "@/app/reducers/transactionsSlice";
+
 
 export default function TransferM(){
     const [to,setTo]=useState("");
@@ -25,21 +27,33 @@ export default function TransferM(){
         const response=await p2ptransfer(to,Number(amount));
         if(response){
             //uddate count here
-            dispatch({ type: 'count/increment' })
-
             alert("money sent successfully")
+            dispatch({ type: 'count/increment' })
+            alert("going to update")
+            try {
+                dispatch(addTransaction({
+                  amount: Number(amount),
+                  timestamp: new Date().toISOString(),
+                  fromUser: { number: "you" },
+                  toUser: { number: to },
+                }))
+                alert("history updated")
+            } catch (e) {
+                alert("error in updating history")
+            }
         }else{
             alert("error in sending money")
         }
     }
 
     return(
-        <Card title="send money">
+        <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">Send Money</h2>
             <TextInput label="to" placeholder="1234567890" onChange={(value) => {setTo(value)}} />
             <TextInput label="amount" placeholder="100" onChange={(value) => {setAmount(value)}} />
             <Button onclick={transfer}>transfer</Button>
             <button onClick={() => dispatch({ type: 'count/decrement' })}>Decrement</button>
-        </Card>
+        </div>
     )
 } 
 

@@ -50,7 +50,8 @@ export default  function Loginpage(){
         
     }
      return(
-            <Card title="login Page">
+            <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
+                <Card title="login Page">
                 
                 <div>
                 <TextInput placeholder={"1234567890"} label="Number" onChange={(value) => {setNumber(value)}} />
@@ -64,6 +65,7 @@ export default  function Loginpage(){
                 
                     
                 
-            </Card>
+                </Card>
+            </div>
         )
 }
