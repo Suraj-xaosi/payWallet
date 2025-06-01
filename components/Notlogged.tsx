@@ -6,8 +6,8 @@ import Loginpage from "@/pages/Loginpage";
 
 export default function Notlogged() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center px-4">
-      {/* Card Container */}
+    
+      
       <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md text-center">
         <h1 className="text-2xl font-bold text-gray-800 mb-4">Please Log In</h1>
         <p className="text-gray-600 mb-6">
@@ -32,7 +32,7 @@ export default function Notlogged() {
           </Button>
         </div>
       </div>
-    </div>
+    
   );
 }
 

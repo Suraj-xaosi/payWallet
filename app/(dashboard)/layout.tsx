@@ -11,19 +11,23 @@ export default function Layout({
   return (
     <>
       <StoreProvider>
-      <div className="flex">
-        <div className="w-72 border-r border-slate-300 min-h-screen mr-4 pt-28">
-            <div>
-                <SidebarItem href={"/profile"} icon={<HomeIcon />} title="Home" />
-                
-                <SidebarItem href={"/transactions"} icon={<TransactionsIcon />} title="Transactions" />
-                <SidebarItem href={"/p2p"} icon={<P2PTransferIcon />} title="P2P Transfer" />
-            </div>
+      <div className="flex min-h-screen w-full">
+        {/* Sidebar */}
+        <div className="w-64 border-r border-slate-300 pt-28 bg-gray-100">
+          <SidebarItem href={"/profile"} icon={<HomeIcon />} title="Home" />
+          <SidebarItem href={"/transactions"} icon={<TransactionsIcon />} title="Transactions" />
+          <SidebarItem href={"/p2p"} icon={<P2PTransferIcon />} title="P2P Transfer" />
+          <SidebarItem href={"/recentpeeps"} icon={<P2PTransferIcon />} title="recentpeeps" />
+        
         </div>
-          
-            {children}
-      </div>  
+
+        {/* Main content */}
+        <div className="flex-1 bg-gray-100 min-h-screen">
+        {children}
+        </div>
+      </div>
       </StoreProvider>
+
     </>
   
   );

@@ -15,17 +15,17 @@ export default async function TransactionsPage() {
     const n:string = user.number;
   
   return (
-    <div className="min-h-screen w-full max-w-screen-lg bg-gray-100 flex flex-col items-center py-10">
+    <div className="min-h-screen w-full  bg-blue-100 flex flex-col items-center ">
       {/* Header */}
-      <header className="bg-blue-600 text-white w-full py-4 shadow-md">
+      <header className="bg-blue-600 text-white w-full py-4 ">
         <div className="container mx-auto text-center">
           <h1 className="text-2xl font-bold">Transactions</h1>
         </div>
       </header>
 
       {/* Transactions Section */}
-      <div className="bg-white shadow-md rounded-lg p-6 mt-8 w-full  px-4">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">All Transactions</h2>
+      <div className="bg-blue-100  p-6  w-full  px-4">
+       
         <Trackcard n={n} />
       </div>
     </div>

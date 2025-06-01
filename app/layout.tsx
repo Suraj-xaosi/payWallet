@@ -24,21 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} bg-gray-100`}>
-      <body className="min-h-screen bg-white flex flex-col">
-        {/* Header */}
-        <header className="bg-blue-600 text-white py-4 shadow-md">
-          <div className="container mx-auto px-4">
-            <h1 className="text-2xl font-bold">PAYMENT APP</h1>
-          </div>
-        </header>
-
-        {/* Main Content */}
-        <main className="flex-grow container mx-auto px-4 py-6">
+      <body className="min-h-screen w-full bg-white flex">
+        <main className="flex-grow w-full min-h-screen">
           {children}
         </main>
-
-        
       </body>
     </html>
   );
 }
+

@@ -2,7 +2,7 @@ import TransferM from "@/components/TransferM";
 
 export default async function P2PPage() {
   return (
-    <div className="min-h-screen w-full max-w-screen-lg bg-gray-100 flex flex-col items-center py-10">
+    <div className="min-h-screen w-full  bg-blue-100 flex flex-col items-center ">
       {/* Header */}
       <header className="bg-blue-600 text-white w-full py-4 shadow-md">
         <div className="container mx-auto text-center">
@@ -11,10 +11,12 @@ export default async function P2PPage() {
       </header>
 
       {/* Send Money Section */}
-      <div className="bg-white shadow-md rounded-lg p-6 mt-8 w-11/12 max-w-md">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Send Money</h2>
+      <div className="bg-blue-100    min-h-screen w-full  px-70 py-30  ">
         <TransferM />
       </div>
+        
+       
+      
     </div>
   );
 }

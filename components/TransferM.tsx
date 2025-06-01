@@ -29,7 +29,7 @@ export default function TransferM(){
             //uddate count here
             alert("money sent successfully")
             dispatch({ type: 'count/increment' })
-            alert("going to update")
+            
             try {
                 dispatch(addTransaction({
                   amount: Number(amount),
@@ -37,7 +37,7 @@ export default function TransferM(){
                   fromUser: { number: "you" },
                   toUser: { number: to },
                 }))
-                alert("history updated")
+                
             } catch (e) {
                 alert("error in updating history")
             }
@@ -47,7 +47,7 @@ export default function TransferM(){
     }
 
     return(
-        <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
+        <div className="bg-blue-50 shadow-lg rounded-lg p-6 w-full max-w-md flex flex-col item-center">
             <h2 className="text-xl font-semibold text-gray-800 mb-4">Send Money</h2>
             <TextInput label="to" placeholder="1234567890" onChange={(value) => {setTo(value)}} />
             <TextInput label="amount" placeholder="100" onChange={(value) => {setAmount(value)}} />

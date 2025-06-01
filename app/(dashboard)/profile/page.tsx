@@ -1,4 +1,6 @@
 import { verifyToken } from "@/app/lib/auth";
+
+
 import Balance from "@/components/Balance";
 import LogoutButton from "@/components/logoutbutton";
 import { cookies } from "next/headers";
@@ -16,7 +18,7 @@ export default async function ProfilePage() {
   const number = user.number;
 
   return (
-    <div className="min-h-screen w-full max-w-screen-lg bg-gray-100 flex flex-col items-center py-10">
+    <div className="min-h-screen w-full  bg-blue-100 flex flex-col items-center ">
       {/* Header */}
       <header className="bg-blue-600 text-white w-full py-4 shadow-md">
         <div className="container mx-auto text-center">
@@ -38,10 +40,14 @@ export default async function ProfilePage() {
         </div>
       </div>
 
+      
+
       {/* Logout Button */}
       <div className="mt-6">
         <LogoutButton />
       </div>
+
+      
     </div>
   );
 }

@@ -9,7 +9,7 @@ export default async function Home() {
      const token = (await cookieStore).get("auth_token")?.value;
      const user = token ? await verifyToken(token) : null;
      if (user) {
-         redirect('/dashboard');
+         redirect('/profile');
      }else{
       redirect('/login')
      }

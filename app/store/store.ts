@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import countReducer from "../reducers/countSlice";
 import  transactionsReducer  from '../reducers/transactionsSlice';
-
+import selectedpeepReducer from "@/app/reducers/selectedpeepSlice";
 export const createStore=()=>{
     return configureStore({
         reducer: {
             count: countReducer,
-            transactions:transactionsReducer
-
+            transactions:transactionsReducer,
+            selectedpeep:selectedpeepReducer,
         }
     });
 }

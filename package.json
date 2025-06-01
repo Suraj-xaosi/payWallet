@@ -13,11 +13,13 @@
     "@reduxjs/toolkit": "^2.7.0",
     "axios": "^1.8.4",
     "bcryptjs": "^3.0.2",
+    "framer-motion": "^12.12.2",
     "jsonwebtoken": "^9.0.2",
     "next": "15.2.4",
     "prisma": "^6.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-draggable": "^4.4.6",
     "react-redux": "^9.2.0",
     "try2": "file:"
   },

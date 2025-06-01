@@ -4,7 +4,7 @@ import { fetchTransactions } from '@/app/reducers/transactionsSlice';
 import { AppDispatch, RootState } from '@/app/store/store';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Card } from './Card';
+
 
 export default function Trackcard({ n }: { n: string }) {
   const dispatch = useDispatch<AppDispatch>();
@@ -23,13 +23,13 @@ export default function Trackcard({ n }: { n: string }) {
   }
 
   return (
-    <div className="space-y-4 w-full">
+    <div className="space-y-4 w-full overflow-auto h-141">
       {entities.map((tx, i) => (
         <div
           key={i}
           className={`p-4 border rounded-lg shadow-md ${
             tx?.fromUser.number === n || tx?.fromUser.number === 'you'
-              ? 'bg-sky-100 border-sky-300'
+              ? 'bg-blue-50 border-blue-300'
               : 'bg-rose-100 border-rose-300'
           }`}
         >
